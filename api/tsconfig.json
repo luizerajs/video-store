@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "lib": ["es5", "es6", "es2018"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "paths": {
+      "@controlers/*": ["./src/controllers/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@config/*": ["./src/config/*"]
+    },
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "strictPropertyInitialization": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+    "files": true
+  }
+}
