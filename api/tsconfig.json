@@ -11,8 +11,11 @@
     "baseUrl": ".",
     "rootDir": "./src",
     "paths": {
-      "@controlers/*": ["./src/controllers/*"],
-      "@entities/*": ["./src/entities/*"],
+      "@entities/*": ["./src/app/entities/*"],
+      "@controlers/*": ["./src/app/controllers/*"],
+      "@middlewares/*": ["./src/app/middlewares/*"],
+      "@repositories/*": ["./src/app/repositories/*"],
+      "@helpers/*": ["./src/app/helpers/*"],
       "@config/*": ["./src/config/*"]
     },
     "emitDecoratorMetadata": true,

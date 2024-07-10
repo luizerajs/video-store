@@ -2,6 +2,7 @@ import * as express from "express";
 import * as bodyParser from "body-parser";
 import * as cors from "cors";
 import { AppDataSource } from "./config/datasource";
+import { routes } from "./app/routes/@index";
 
 AppDataSource.initialize()
   .then(async () => {
@@ -9,10 +10,7 @@ AppDataSource.initialize()
 
     app.use(bodyParser.json());
     app.use(cors());
-
-    app.get("/", (req, res) => {
-      res.json("tudo certo");
-    });
+    app.use(routes);
 
     app.listen(3000, () =>
       console.log("Start server on http://localhost:3000 ")
