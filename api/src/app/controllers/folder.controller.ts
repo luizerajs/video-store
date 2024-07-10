@@ -18,7 +18,7 @@ export class FolderController {
     }
   }
 
-  static async listAll(request: Request, response: Response) {
+  static async listAll(_request: Request, response: Response) {
     try {
       const output = await folderRepository.find({
         relations: { videos: true },

@@ -31,7 +31,7 @@ export class VideoController {
     }
   }
 
-  static async listAll(request: Request, response: Response) {
+  static async listAll(_request: Request, response: Response) {
     try {
       const output = await videoRepository.find();
       return response.status(200).json(output);
